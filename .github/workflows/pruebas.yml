@@ -1,0 +1,26 @@
+name: Pruebas automatizadas
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  prueba-formulario:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar Playwright
+        run: npm install --no-save @playwright/test
+
+      - name: Instalar navegador
+        run: npx playwright install --with-deps chromium
+
+      - name: Ejecutar prueba automatizada
+        run: npx playwright test tests/contacto.spec.js

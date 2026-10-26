@@ -19,26 +19,15 @@ https://welcome-form-journey.lovable.app/formulario
 
 Se propone evaluar las validaciones de los campos, el comportamiento del formulario y la respuesta ante datos válidos e inválidos.
 
+
 ## 4. Tipos de prueba
+Funcional (manual), validación de entradas (manual) y automatizada E2E con Playwright. Las unitarias y de integración no se ejecutaron por falta de acceso al código fuente.
 
-- Pruebas unitarias.
-- Pruebas de integración.
-- Pruebas funcionales o de sistema.
-
-La selección definitiva dependerá del acceso al código fuente y de los componentes que se puedan probar.
-
-## 5. Casos de prueba
-
-Se documentarán seis casos de prueba, dos por cada tipo seleccionado.
+## 5. Resultados
+4 de 6 casos ejecutados, todos aprobados. Pendientes: PV-02 y PA-02. Detalle en `casos-de- pruebas.md`.
 
 ## 6. Automatización
+`tests/contacto.spec.js` se ejecuta en GitHub Actions (`.github/workflows/pruebas.yml`). Run #1 fallido; run #2 aprobado tras corregir la prueba.
 
-Se implementará y ejecutará al menos una prueba automatizada. Se registrarán la herramienta utilizada, los resultados y las evidencias.
-
-## 7. Evidencias y resultados
-
-Las capturas de pantalla, los resultados de ejecución y el código de las pruebas se incorporarán al repositorio a medida que se realicen las pruebas.
-
-## 8. Conclusiones
-
-Las conclusiones se redactarán después de ejecutar las pruebas y analizar los resultados obtenidos.
+## 7. Evidencias
+Carpeta `evidencias/` y capturas de Actions en la raíz del repositorio.
